@@ -1,0 +1,5 @@
+c:\Users\Asus\Desktop\CURRENCYCONVERTER\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Asus\Desktop\CURRENCYCONVERTER\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+c:\Users\Asus\Desktop\CURRENCYCONVERTER\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+c:\Users\Asus\Desktop\CURRENCYCONVERTER\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+c:\Users\Asus\Desktop\CURRENCYCONVERTER\Domain\obj\Debug\net8.0\Domain.sourcelink.json

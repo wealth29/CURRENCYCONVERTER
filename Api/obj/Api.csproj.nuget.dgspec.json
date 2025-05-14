@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Api\\Api.csproj": {}
+    "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Api\\Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Api\\Api.csproj": {
+    "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Api\\Api.csproj",
+        "projectUniqueName": "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Api\\Api.csproj",
+        "projectPath": "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Api\\Api.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Api\\obj\\",
+        "outputPath": "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Application\\Application.csproj"
+              "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Application\\Application.csproj": {
+                "projectPath": "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Application\\Application.csproj"
               }
             }
           }
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Application\\Application.csproj": {
+    "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Application\\Application.csproj",
+        "projectUniqueName": "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Application\\Application.csproj",
+        "projectPath": "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Application\\obj\\",
+        "outputPath": "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -101,8 +101,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Domain\\Domain.csproj"
+              "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Domain\\Domain.csproj"
               }
             }
           }
@@ -141,14 +141,14 @@
         }
       }
     },
-    "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Domain\\Domain.csproj": {
+    "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Domain\\Domain.csproj",
+        "projectUniqueName": "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Domain\\Domain.csproj",
+        "projectPath": "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Domain\\obj\\",
+        "outputPath": "c:\\Users\\Asus\\Desktop\\CURRENCYCONVERTER\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config"
