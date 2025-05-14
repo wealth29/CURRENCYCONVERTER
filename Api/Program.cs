@@ -1,43 +1,48 @@
+
+
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. Logging
+// Logging
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 
-// 2. Configuration
-builder.Services.Configure<ExchangeApiOptions>(builder.Configuration.GetSection("ExchangeApi"));
+// Configuration
+builder.Services.Configure<AppSettings>(
+    builder.Configuration.GetSection("AppSettings"));
 
-// 3. EF Core
-builder.Services.AddDbContext<ExchangeDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+// DbContext
+builder.Services.AddDbContext<CurrencyDbContext>(options =>
+    options.UseInMemoryDatabase("CurrencyDb"));
 
-// 4. HttpClient + Polly retry
+// HttpClient with retry and rate limiting handler
 builder.Services.AddHttpClient<IExchangeRateClient, ExternalExchangeRateClient>()
-    .AddTransientHttpErrorPolicy(policy => 
-        policy.WaitAndRetryAsync(new[] { TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(2), TimeSpan.FromSeconds(4) }));
+    .AddPolicyHandler(PolicyExtensions.GetRetryPolicy())
+    .AddHttpMessageHandler<ApiKeyRateLimitingHandler>();
 
-// 5. In‑memory rate limiting
-builder.Services.AddSingleton<IApiKeyUsageTracker, InMemoryApiKeyUsageTracker>();
+// DI registrations
+builder.Services.AddScoped<IExchangeRateClient, ExternalExchangeRateClient>();
+builder.Services.AddScoped<ICurrencyService, CurrencyService>();
+builder.Services.AddHostedService<RealTimeRateBackgroundService>();
 
-// 6. Controllers, versioning, Swagger
+// Controllers, Swagger, Validation
 builder.Services.AddControllers();
-builder.Services.AddApiVersioning(opts =>
-{
-    opts.AssumeDefaultVersionWhenUnspecified = true;
-    opts.DefaultApiVersion = new ApiVersion(1, 0);
-    opts.ReportApiVersions = true;
-});
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Currency Converter API", Version = "v1" });
+});
 
 var app = builder.Build();
 
-app.UseSwagger();
-app.UseSwaggerUI(c =>
+// Middleware
+if (app.Environment.IsDevelopment())
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "CurrencyConverter API v1");
-});
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
+app.UseRouting();
+app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
